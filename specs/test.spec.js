@@ -8,19 +8,19 @@ test('mount a vue component', () => {
       value: 'Faizan Arif',
     },
   })
-  expect(wrapper.html()).toMatchSnapshot()
+  expect(wrapper).toMatchSnapshot()
 })
 
 test('Mount a Parent component', () => {
   const wrapperUsingMount = mount(List)
 
-  expect(wrapperUsingMount.html()).toMatchSnapshot()
+  expect(wrapperUsingMount).toMatchSnapshot()
 })
 
 test('Shallow mount a Parent component', () => {
   const wrapperUsingShallowMount = shallowMount(List)
 
-  expect(wrapperUsingShallowMount.html()).toMatchSnapshot()
+  expect(wrapperUsingShallowMount).toMatchSnapshot()
 })
 
 test('Add new movie to existing ones', async () => {
@@ -32,5 +32,5 @@ test('Add new movie to existing ones', async () => {
   })
   // Waiting for DOM to get updated
   await wrapper.vm.$nextTick()
-  expect(wrapper.html()).toMatchSnapshot()
+  expect(wrapper).toMatchSnapshot()
 })
