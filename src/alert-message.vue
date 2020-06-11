@@ -11,31 +11,30 @@ export default {
     return {
       interval: undefined,
       counter: 0,
-      timer: 5
-    };
+      timer: 5,
+    }
   },
 
   computed: {
     timeLeft() {
-      return this.timer - this.counter;
-    }
+      return this.timer - this.counter
+    },
   },
 
   mounted() {
     this.interval = setInterval(() => {
-      this.counter++;
-      if (this.counter == this.timer) this.$destroy();
-    }, 1000);
+      this.counter++
+      if (this.counter == this.timer) this.$destroy()
+    }, 1000)
   },
 
   beforeDestroy() {
-    clearInterval(this.interval);
-    console.log("Alert removed!");
+    clearInterval(this.interval)
+    console.log('Alert removed!')
   },
 
   destroyed() {
-    this.$el.remove();
-  }
-};
+    this.$el.remove()
+  },
+}
 </script>
-
