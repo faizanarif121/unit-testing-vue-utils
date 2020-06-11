@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Add new movie to existing ones 1`] = `
+<div>
+  <ul>
+    <li><strong>Iron Man</strong></li>
+    <li><strong>Avengers</strong></li>
+    <li><strong>Infitinity War</strong></li>
+    <li><strong>The shawshank Redemption</strong></li>
+  </ul>
+</div>
+`;
+
 exports[`Mount a Parent component 1`] = `
 <div>
   <ul>

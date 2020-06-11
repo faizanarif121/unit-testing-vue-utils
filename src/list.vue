@@ -11,27 +11,19 @@
 </template>
 
 <script>
-  import ListItem from './components/list-item'
+import ListItem from './components/list-item'
 
-  export default {
+export default {
+  components: {
+    ListItem,
+  },
 
-    components: {
-      ListItem
-    },
-
-    data() {
-      return {
-        marvelMovies: [
-          'Iron Man',
-          'Avengers',
-          'Infitinity War',
-        ]
-      }
+  data() {
+    return {
+      marvelMovies: ['Iron Man', 'Avengers', 'Infitinity War'],
     }
-
-  }
+  },
+}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

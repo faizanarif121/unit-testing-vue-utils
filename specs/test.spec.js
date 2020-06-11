@@ -22,3 +22,15 @@ test('Shallow mount a Parent component', () => {
 
   expect(wrapperUsingShallowMount.html()).toMatchSnapshot()
 })
+
+test('Add new movie to existing ones', async () => {
+  const wrapper = mount(List)
+  const existingMovies = wrapper.vm.marvelMovies
+  // As we're updating dom here, so we need to wait for changes
+  wrapper.setData({
+    marvelMovies: [...existingMovies, 'The shawshank Redemption'],
+  })
+  // Waiting for DOM to get updated
+  await wrapper.vm.$nextTick()
+  expect(wrapper.html()).toMatchSnapshot()
+})
