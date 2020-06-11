@@ -10,12 +10,12 @@ import { mapActions } from 'vuex'
 export default {
   data() {
     return {
-      ...this.$store.state
+      ...this.$store.state,
     }
   },
 
   methods: {
-    ...mapActions(['addIngredient'])
+    ...mapActions(['addIngredient']),
   },
 }
 </script>
